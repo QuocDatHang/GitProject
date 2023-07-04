@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sở thích của bạn</title>
+</head>
+<body>
+    <style>
+        form{
+            background-color: aqua;
+            padding: 10px;
+            width: 415px;
+        }
+        table, tr, td{
+            background-color: white;
+            border: 10px solid white;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+            /* padding: 10px ; */
+            margin: 10px aqua;
+        }
+        td{
+            width: 120;
+            height: 20px;
+        }
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+            text-align: right;
+            padding: 6px;
+        }
+        .head{
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+        .fill{
+            box-shadow: inset 1px 1px 1px 0;
+        }
+        .shadow{
+            box-shadow: inset 2px 2px 1px 0;
+        }
+    </style>
+    <form action="this_is_dat.php" method="get">
+        <table>
+            <tr>
+                <td colspan="4" class="head">SỞ THÍCH CỦA BẠN</td>
+            </tr>
+            <tr>
+                <td class="blue">Họ và tên</td>
+                <td colspan="3">
+                    <input class="fill" type="text" name="yourname" size="20px">
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">Email</td>
+                <td colspan="3">
+                    <input class="fill" type="text" name="email" size="15px">
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">Sở thích</td>
+                <td class="red">
+                    <input class="shadow" type="checkbox" name="hobby">Thể thao
+                </td>
+                <td class="red">
+                    <input class="shadow" type="checkbox" name="hobby">Âm nhạc
+                </td>
+                <td class="red">
+                    <input class="shadow" type="checkbox" name="hobby">Đọc sách
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="red">
+                    <input class="shadow" type="checkbox" name="hobby">Lướt web
+                </td>
+                <td class="red">
+                    <input class="shadow" type="checkbox" name="hobby">Chơi game
+                </td>
+                <td class="red">
+                    <input class="shadow" type="checkbox" name="hobby">Điện ảnh
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="red">
+                    <input class="shadow" type="checkbox" name="hobby">Du lịch
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" name="submit form" value="Gửi thông tin">
+                </td>
+                <td>
+                    <input type="reset" name="reset form" value="Nhập lại">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
