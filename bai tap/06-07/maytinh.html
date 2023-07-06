@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+</head>
+<body>
+    <h3>Caculator</h3>
+    <form action="">
+        <input type="text" id="so1">
+        <input type="text" id="so2"> <br><br>
+        <button type="button" onclick="phepcong()">Addition(+)</button>
+        <button type="button" onclick="pheptru()">Subtraction(-)</button>
+        <button type="button" onclick="phepnhan()">Multiplication(X)</button>
+        <button type="button" onclick="phepchia()" >Division(/)</button>
+    </form> <br>
+    <label>Result: </label>
+    <label id="ketqua"></label>
+
+    <script>
+        function phepcong(){
+            var a = +document.getElementById("so1").value;
+            var b = +document.getElementById("so2").value;
+            document.getElementById("ketqua").innerText = +(a+b);
+        }
+        function pheptru(){
+            var a = +document.getElementById("so1").value;
+            var b = +document.getElementById("so2").value;
+            document.getElementById("ketqua").innerText = +(a-b);
+        }
+        function phepnhan(){
+            var a = +document.getElementById("so1").value;
+            var b = +document.getElementById("so2").value;
+            document.getElementById("ketqua").innerText = +(a*b);
+        }
+        function phepchia(){
+            var a = +document.getElementById("so1").value;
+            var b = +document.getElementById("so2").value;
+            document.getElementById("ketqua").innerText = +(a/b);
+        }
+    </script>
+</body>
+</html>
