@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ung dung chuyen doi tien te</title>
+
+    <style>
+        .containerflex{
+            /* width: 400px; */
+            display: flex;
+            flex-flow: row wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="containerflex">
+        <div style="width: 110px; text-align: center;">Amount</div>
+        <div style="width: 110px">From Curency</div>
+        <div style="width: 110px">To Curency</div>
+    </div>
+    <form action="" method="get">
+        <input type="text" id="idamount" size="10">
+        <select id="iddauvao" style="width: 100px;">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select>
+        <select id="iddaura" style="width: 100px;">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select>
+        <button type="button" onclick="chuyendoi()">Convert</button>
+    </form>
+    <p id="result_1"></p>
+
+    <script>
+
+        function chuyendoi(){
+            var a = document.getElementById("idamount").value;
+            var b = document.getElementById("iddauvao").value;
+            var c = document.getElementById("iddaura").value;
+            if ((b ==="USD") && (c ==="VND")){
+                document.getElementById("result_1").innerText = "Ket qua la: " +  (a*23000) + "VND";
+            }
+            if ((b==="USD") && (c==="USD")){
+                document.getElementById('result_1').innerText = "Ket qua la: " + a + 'USD'
+            }
+            if ((b==="VND") && (c==="USD")){
+                document.getElementById('result_1').innerText = "Ket qua la: " + a/23000 + 'USD'
+            }
+            if ((b==="VND") && (c==="VND")){
+                document.getElementById('result_1').innerText = "Ket qua la: " + a + 'VND'
+            }
+        }
+
+    </script>
+</body>
+</html>
