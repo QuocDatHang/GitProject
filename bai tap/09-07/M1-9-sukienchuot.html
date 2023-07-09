@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Su kien chuot</title>
+</head>
+<body>
+    <form>
+        <img id="ball" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" alt="anh bi loi roi" width="30%">
+        <p>Click button below to move the image to right</p>
+        <button type="button"  onclick="moveright()">Click me</button>
+    </form>
+
+    <script>
+        let start = null;
+        start = document.getElementById('ball');
+        function init(){
+            start = document.getElementById('ball');
+            start.style.position = 'relative';
+            start.style.left = '0px';
+        }
+        function moveright(){
+            start.style.left = parseInt(start.style.left)+ 10 + 'px';
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>
