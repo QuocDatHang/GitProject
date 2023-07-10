@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra so ngay trong thang</title>
+</head>
+<body>
+    <h2>Kiem tra so ngay trong thang</h2>
+    <form action="">
+        <input type="text" id="month">
+        <button type="button" onclick="checkmonth()">Kiem tra so ngay</button>
+        <p id="result"></p>
+    </form>
+    <script>
+        function checkmonth(){
+            let inputmonth = parseInt(document.getElementById('month').value);
+            switch (inputmonth){
+                case 1:
+                case 3: 
+                case 5: 
+                case 7: 
+                case 8: 
+                case 10: 
+                case 12:
+                    document.getElementById('result').innerText = `Thang ${inputmonth} co 31 ngay`;
+                break;
+                case 2: 
+                    document.getElementById('result').innerText = `Thang ${inputmonth} co 28 hoac 29 ngay`;
+                break;
+                case 4: 
+                case 6:
+                case 9: 
+                case 11: 
+                    document.getElementById('result').innerText = `Thang ${inputmonth} co 30 ngay`;
+                break;
+                default:
+                    alert('Nhap so tu 1 den 12');
+                
+            }
+        }
+    </script>
+</body>
+</html>
