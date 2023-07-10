@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May tinh Casino</title>
+</head>
+<body>
+        <table style="border: 1px solid; width: 400px;">
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="screen" style="font-size: 32px; height: 100px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="displayNumber(1)" style="font-size: 50px; width: 80px;">1</button>
+                </td>
+                <td>
+                    <button onclick="displayNumber(2)" style="font-size: 50px; width: 80px;">2</button>
+                </td>
+                <td>
+                    <button onclick="displayNumber(3)" style="font-size: 50px; width: 82px;">3</button>
+                </td>
+                <td>
+                    <button onclick="displayoperator('+')" style="font-size: 50px; width: 80px;">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="displayNumber(4)" style="font-size: 50px; width: 80px;">4</button>
+                </td>
+                <td>
+                    <button onclick="displayNumber(5)" style="font-size: 50px; width: 80px;">5</button>
+                </td>
+                <td>
+                    <button onclick="displayNumber(6)" style="font-size: 50px; width: 80px;">6</button>
+                </td>
+                <td>
+                    <button onclick="displayoperator('-')" style="font-size: 50px; width: 80px;">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="displayNumber(7)" style="font-size: 50px; width: 80px;">7</button>
+                </td>
+                <td>
+                    <button onclick="displayNumber(8)" style="font-size: 50px; width: 80px;">8</button>
+                </td>
+                <td>
+                    <button onclick="displayNumber(9)" style="font-size: 50px; width: 80px;">9</button>
+                </td>
+                <td>
+                    <button onclick="displayoperator('*')" style="font-size: 50px; width: 80px;">x</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="displayoperator('C')" style="font-size: 50px; width: 80px;">C</button>
+                </td>
+                <td>
+                    <button onclick="displayNumber(0)" style="font-size: 50px; width: 80px;">0</button>
+                </td>
+                <td>
+                    <button onclick="displayoperator('=')" style="font-size: 50px; width: 80px;">=</button>
+                </td>
+                <td>
+                    <button onclick="displayoperator('/')" style="font-size: 50px; width: 80px;">/</button>
+                </td>
+            </tr>
+        </table>
+
+    <script>
+        function displayNumber(number){
+            document.getElementById('screen').value += number;
+        }
+        function displayoperator(operator){
+            if (operator == '='){
+                document.getElementById('screen').value =  eval(document.getElementById('screen').value)
+            }
+            else if (operator == 'C') {
+                document.getElementById('screen').value = '';
+            }
+            else {
+                document.getElementById('screen').value += operator;
+            }
+        }
+    </script>
+</body>
+</html>
