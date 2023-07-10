@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body onload="ready()">
+    <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" alt="anh bi loi roi" style="position: absolute; left: 0;top: 0; height: 100; width: 80;">
+    <script>
+        function upPressed(){
+            let move = document.getElementById('nobita');
+            move.style.top = parseInt(move.style.top) - 5 + 'px';
+        }
+        function downPressed(){
+            let move = document.getElementById('nobita');
+            move.style.top = parseInt(move.style.top) + 5 + 'px';
+        }
+        function leftPressed(){
+            let move = document.getElementById('nobita');
+            move.style.left = parseInt(move.style.left) - 5 + 'px';
+        }
+        function rightPressed(){
+            let move = document.getElementById('nobita');
+            move.style.left = parseInt(move.style.left) + 5 + 'px';
+        }
+        function moveSelection(a){
+            if (a.keyCode == 38){
+                upPressed();
+            }
+            if (a.keyCode == 40){
+                downPressed();
+            }
+            if (a.keyCode == 37){
+                leftPressed();
+            }
+            if (a.keyCode == 39){
+                rightPressed();
+            }
+        }
+        function ready(){
+            window.addEventListener('keydown', moveSelection);
+        }
+    </script>
+</body>
+</html>
