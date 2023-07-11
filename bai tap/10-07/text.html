@@ -6,28 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="display">
-    <button onclick="selectNumber(1)">1</button>
-    <button onclick="selectNumber(2)">2</button>
-    <button onclick="selectNumber(3)">3</button>
-    <button onclick="selectNumber(4)">4</button>
-    <button onclick="selectOperator('+')">+</button>
-    <button onclick="selectOperator('*')">x</button>
-    <button onclick="selectOperator('=')">=</button>
-
-    <script>
-        function selectNumber(number){
-            document.getElementById('display').value += number;
-        }
-
-        function selectOperator(operator){
-            if(operator == '='){
-                document.getElementById('display').value = eval(document.getElementById('display').value)
-            }
-            else{
-                document.getElementById('display').value += operator;
-            }
-        }
-    </script>
+    <img style="width: 100px;" 
+        onclick="document.getElementById('avatar').click()"
+    src="https://i.pinimg.com/originals/ff/a0/9a/ffa09aec412db3f54deadf1b3781de2a.png" alt="">
+    <input id="avatar" type="file" style="display: block;">
 </body>
 </html>
