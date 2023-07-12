@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bang cuu chuong</title>
+</head>
+<body>
+
+    <script>
+        var sout, i, j;
+        sout = "<h2>Bang cuu chuong</h2> <table border='1' width='500' height='300'>";
+        i=1;
+        j=2;
+        while (i<10){
+            sout += '<tr>';
+            while (j<10){
+                sout += '<td>' + j + 'x' + i + '=' + j*i + '</td>';
+                j++;
+            }
+            sout += '</tr>';
+            j=2;    
+            i++;
+        }
+        sout += '</table>' ;
+        document.write(sout);
+    </script>
+    
+</body>
+</html>
