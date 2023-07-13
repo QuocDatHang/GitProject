@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ban co caro</title>
+</head>
+
+<body>
+    <h3>Game caro</h3>
+    <p id="banco"></p>
+    <button id="change" onclick="change_0_To_X()">Change value</button>
+    <script>
+        var arr = [
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0]
+        ]
+        var str = '';
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                str += arr[i][j] + '&nbsp;&nbsp;&nbsp;';
+            }
+            str += '<br>';
+        }
+        document.getElementById('banco').innerHTML = str;
+
+        function change_0_To_X() {
+            var a = prompt('Nhap toa do X');
+            var b = prompt('Nhap toa do Y');
+            str = '';
+            arr[a][b] = 'x';
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    str += arr[i][j] + '&nbsp;&nbsp;&nbsp;';
+                }
+                str += '<br>';
+            }
+            document.getElementById('banco').innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>
