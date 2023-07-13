@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Them phan tu vao mang va hien thi</title>
+</head>
+
+<body>
+    <h2>Sample Screen:</h2>
+    <input type="text" id="inputnumber">
+    <button onclick="addnum()">Add</button>
+    <button onclick="screen()">Display</button>
+    <div id="result"></div>
+
+    <script>
+        var arr = [];
+        function addnum() {
+            var num = document.getElementById('inputnumber').value;
+            arr.push(num);
+            alert('Da them ' + num + ' vao mang');
+            document.getElementById('inputnumber').value = '';
+            console.log(arr);
+        }
+        function screen() {
+            let str = '<hr>';
+            for (let i = 0; i < arr.length; i++) {
+                str += 'Element '+i+ ': '+ arr[i] + '<br>';
+            }
+            document.getElementById('result').innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

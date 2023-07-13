@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hien thi N so nguyen to dau tien</title>
+</head>
+
+<body>
+    <script>
+        var number = Number(prompt('Nhap n so nguyen to dau tien'));
+        var n = 2;
+        var i;
+        var count = 0;
+            var flag = true;
+            for (i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        
+        while (flag == true) {
+            document.write(n);
+            n++;
+        }
+        count++;
+        while (count < number) {
+        
+        }
+    </script>
+</body>
+
+</html>
