@@ -13,21 +13,19 @@
         var n = 2;
         var i;
         var count = 0;
-            var flag = true;
+        while (count < number) {
+            let flag = true;
             for (i = 2; i < n; i++) {
                 if (n % i == 0) {
                     flag = false;
                     break;
                 }
             }
-        
-        while (flag == true) {
-            document.write(n);
+            if (flag == true) {
+                document.write(n+'<br>5');
+                count++;
+            }
             n++;
-        }
-        count++;
-        while (count < number) {
-        
         }
     </script>
 </body>
