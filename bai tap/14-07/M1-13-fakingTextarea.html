@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faking Textarea on Typing</title>
+</head>
+
+<body>
+    <h2>Let typing anything</h2>
+    <input type="text" id="typing" onkeydown="fakingText()" style="width: 400px; height: 300px;">
+
+    <script>
+        var crazy = 'Em là ai từ đâu bước đến nơi đây dịu dàng chân phương';
+        var n = '';
+        function fakingText() {
+            var str = document.getElementById('typing').value;
+            if (str.length > 0) {
+                for (var i = 0; i < str.length; i++) {
+                    n += crazy[i];
+                    if (i == 53) {
+                        document.getElementById('typing').value = '';
+                        n = '';
+                    }
+                }
+            }
+            document.getElementById('typing').value = n;
+            n = '';
+            setTimeout('fakingText()', 1);
+        }
+    </script>
+</body>
+
+</html>
