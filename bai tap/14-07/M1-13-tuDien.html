@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Nhập từ:</label>
+    <input type="text" id="typing">
+    <button onclick="translates()">Dịch</button>
+    <p id="result"></p>
+
+    <script>
+        function translates() {
+            var english = ['cat', 'dog', 'python', 'snake', 'bird', 'butterfly'];
+            var vietnam = ['mèo', 'chó', 'trăn', 'rắn', 'chim', 'bướm'];
+            var a = english.indexOf(document.getElementById('typing').value);
+            if (a != -1) {
+                document.getElementById('result').innerText = vietnam[a];
+            }
+            else
+                document.getElementById('result').innerText = ''
+        }
+    </script>
+</body>
+
+</html>
