@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+</head>
+
+<body>
+    <h2>Temperature Converter</h2>
+    <p>Type a value in the Fahrenheit field to convert the value to Celcius:</p>
+    <label for="">Fahrenheit</label>
+    <input type="number" oninput="convertFToC(this.value)">
+    <p id="result"></p>
+
+    <script>
+        function convertFToC(numF){
+            numF= parseFloat(numF);
+            document.getElementById('result').innerHTML = `Celcius: ${(numF -32)/1.8}`;
+        }
+    </script>
+</body>
+
+</html>
