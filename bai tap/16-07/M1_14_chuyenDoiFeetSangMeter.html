@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyen doi feet sang meter</title>
+</head>
+<body>
+    <script>
+        function feetToMeter(feet){
+            let meter = 0.305 * feet;
+            return meter;
+        }
+        function meterToFeet(meter){
+            let feet = 3.279 * meter;
+            return feet;
+        }
+        numFeet = Number(prompt("nhap so feet:"));
+        numMeter = Number(prompt("nhap so meter:"));
+
+        document.write(`${numFeet} feet = ${feetToMeter(numFeet)} meter <br> ${numMeter} meter = ${meterToFeet(numMeter)} feet`);
+    </script>
+</body>
+</html>
