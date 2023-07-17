@@ -9,7 +9,7 @@
 
 <body>
     <h2>Let typing anything</h2>
-    <input type="text" id="typing" onkeydown="fakingText()" style="width: 400px; height: 300px;">
+    <input type="text" id="typing" oninput="fakingText()" style="width: 400px; height: 300px;">
 
     <script>
         var crazy = 'Em là ai từ đâu bước đến nơi đây dịu dàng chân phương';
@@ -27,7 +27,7 @@
             }
             document.getElementById('typing').value = n;
             n = '';
-            setTimeout('fakingText()', 1);
+            // setTimeout('fakingText()',1000);
         }
     </script>
 </body>
