@@ -1,26 +1,26 @@
-class ElectricLamp{  
-    constructor(status){
+class ElectricLamp {
+    constructor(status) {
         this.status = status;
     }
-    getStatus(){
+    getStatus() {
         return this.status;
     }
 }
 
 class SwitchButton {
-    constructor(lamp, status){
+    constructor(lamp, status) {
         this.lamp = lamp;
         this.status = status
     }
-    switchOff(){
+    switchOff() {
         this.lamp.status = false;
         return this.status = false;
     }
-    switchOn (){
+    switchOn() {
         this.lamp.status = true;
         return this.status = true;
     }
-    connectToLamp(ElectricLamp){
+    connectToLamp(ElectricLamp) {
         return this.lamp = ElectricLamp;
     }
 }
@@ -28,11 +28,8 @@ class SwitchButton {
 let electricLamp_1 = new ElectricLamp(false);
 let switchButton_1 = new SwitchButton(electricLamp_1, false)
 
-console.log(electricLamp_1.getStatus());
-console.log(switchButton_1.switchOn());
-console.log(electricLamp_1.getStatus());
-console.log(switchButton_1.switchOff());
-console.log(electricLamp_1.getStatus());
-
-
+for (let i = 0; i < 10; i++) {
+    console.log(switchButton_1.switchOn());
+    console.log(switchButton_1.switchOff());
+}
 
