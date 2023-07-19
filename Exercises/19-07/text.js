@@ -1,15 +1,30 @@
-class Temperature {
-    constructor(degreeC) {
-        this.degreeC = degreeC;
+/*
+class Mobile {
+    constructor(name, price) {
+        this.name = name;
+        this.value = price;
+        this.message = '';
     }
-    convertCtoF() {
-        return this.degreeC * 1.8 + 32;
+    setMessage(message) {
+        this.message = message;
     }
-    convertCtoK() {
-        return this.degreeC + 273.15;
+    getMessage(){
+        return this.message;
+    }
+    sendMessage(message, name){
+        name.setMessage(message);
     }
 }
-let degreeC = new Temperature(25);
+let iphone = new Mobile('Iphone', 1000);
+let samsung = new Mobile('Samsung', 2000)
+// console.log(iphone.getMessage());
+samsung.setMessage('i am samsung');
+samsung.sendMessage("hi, iphone", iphone);
+console.log(iphone);
+*/
 
-console.log(degreeC.convertCtoF());
-console.log(degreeC.convertCtoK());
+// var d = new Date()
+// console.log(d.getTime());
+
+var x='hello my name is Pia'
+console.log(x.split(','));

@@ -16,3 +16,5 @@ console.log(length_1.perimeter());
 console.log(length_1.acreage());
 document.write(length_1.perimeter());
 document.write(length_1.acreage());
+
+
