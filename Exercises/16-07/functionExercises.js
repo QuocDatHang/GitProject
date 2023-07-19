@@ -108,18 +108,56 @@ console.log(arr);
 */
 
 // Bài 19: Tìm số chẵn lớn nhất trong ma trận
-
+/*
 var arr = [
-    [1, 2, 5, 7, 9, 3],
+    [10, 2, 5, 7, 9, 3],
     [4, 6, 12, 20, 14, 2],
-    [3, 4, 6, 8, 23]
+    [30, 4, 6, 80, 23]
 ]
 function getEvenMax(array) {
+    let count = 0;
+    let evenMax = 0;
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array[i].length; j++) {
-            if (array[i][j] % 2 == 0){
-                let Max = array[i][j]
+            if (array[i][j] % 2 == 0 && count == 0) {
+                evenMax = array[i][j];
+                count = 1;
             }
+            if (array[i][j] % 2 == 0) {
+                if (array[i][j] > evenMax) {
+                    evenMax = array[i][j];
+                }
+            }
+
         }
     }
+    return evenMax;
 }
+console.log(getEvenMax(arr));
+*/
+
+//Bài 20: Liệt kê các dòng có tổng lớn nhất
+
+/*
+var arr = [
+    [1, 2, 5, 2, 12],
+    [12, 2, 5, 8, 6],
+    [10, 27, 5, 3],
+    [1, 3, 9, 4, 6, 7, 8, 2]
+]
+function listMaxSumRow(array) {
+    let maxSumRow = 0;
+    for (let i = 0; i < array.length; i++) {
+        let sum = 0;
+        for (let j = 0; j < array[i].length; j++) {
+            sum += array[i][j];
+        }
+        if (sum >= maxSumRow) {
+            maxSumRow = sum;
+        }
+    }
+
+return maxSumRow;
+}
+console.log(listMaxSumRow(arr));
+*/
